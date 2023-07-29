@@ -1,0 +1,38 @@
+*{
+   background-color:darkcyan; 
+   /* background-image: url(C:\Users\hp\Desktop\My-App\MyApp-master\src\app\images\Picture1.png); */
+  background-size: cover;
+  background-repeat: no-repeat; 
+}
+
+/* .active-link{
+    font-weight: bold;
+
+} */
+/* .navbar-light .navbar-nav .nav-link.active-link
+{
+    color: green;
+    font-weight: bold;
+
+ 
+} */
+.navbar-light .navbar-nav .nav-link
+{
+  color:black;
+  padding-right: 20px;
+}
+.navbar-light .navbar-nav .nav-link.active-link
+{
+    color:white;
+    text-decoration:underline;
+    
+    
+}
+.navbar-brand{
+  color: white;
+  font-size: 30px;
+}
+.nav-link{
+  font-size:25px;
+  
+}

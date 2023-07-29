@@ -1,0 +1,55 @@
+<!-- {% comment %} <label for="images" class="drop-container" id="dropcontainer">
+    <span class="drop-title">Upload Transaction File</span>
+    
+    <input type="file" id="images"  required>
+    <button type="submit">UPLOAD</button>
+    <br>
+    <p><img src="tic.png">img File Scanner Succesfully</p>
+  </label> {% endcomment %}
+  <form (submit)="onFileSelected($event)">
+    <input type="file" (change)="onFileChange($event)" />
+    <button type="submit">Upload</button>
+  </form> -->
+
+  <!-- <label for="images" class="drop-container" id="dropcontainer">
+    <span class="drop-title">Upload Transaction File</span>
+    <input type="file" id="images" required style="display: none;">
+    <button type="button" onclick="document.getElementById('images').click();">CHOOSE FILE</button>
+    <br>
+    <p><img src="tic.png" alt="img"> File Scanner Successfully</p>
+</label>
+
+<form (submit)="onFileSelected()">
+  <input type="file" (change)="onFileChange($event)" id="fileInput" style="display: none;" /> 
+  <button type="button" onclick="document.getElementById('fileInput').click();">CHOOSE FILE</button>
+  <button type="submit">UPLOAD</button>
+</form>
+ -->
+ 
+ <div class="center-container">
+  <h2>Choose Transaction File</h2>
+  
+  <form (submit)="onFileSelected()">
+    
+    <div class="file-input-container">
+      <label for="fileInput" class="choose-file-btn">CHOOSE FILE</label>
+      <input type="file" (change)="onFileChange($event)" id="fileInput" style="display: none;" /> 
+    </div>
+    <div class="selected-file-container" *ngIf="selectedFile">
+      <div class="selected-file-label">Selected File:</div>
+      <div class="selected-file-name">{{ selectedFile.name }}</div>
+    </div>
+
+   <!--<span *ngIf="selectedFile">Selected File: {{ selectedFile.name }}</span>--> 
+    <div class="upload-button-container">
+      <button type="submit">UPLOAD</button>
+    </div>
+  </form>
+ 
+  <!-- Success popup message -->
+  <div class="success-popup" *ngIf="showPopup">
+    File uploaded successfully!
+  </div>
+</div>
+
+
